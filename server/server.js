@@ -68,6 +68,11 @@ app.use('/api/households', householdRoutes);
 app.use('/api/payments', paymentRoutes);
 app.use('/api/chat', chatRoutes);
 
+app.get('/', (req, res) => {
+  res.json({ message: 'Welcome to ZetuList API 🎉' });
+});
+
+
 // Health check
 app.get('/api/health', (req, res) => {
   res.json({ 
